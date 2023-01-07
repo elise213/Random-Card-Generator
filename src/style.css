@@ -2,4 +2,65 @@
 
 body {
   background-color: green;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.newCard {
+  margin: 50px;
+}
+
+h1,
+.card::before,
+.card::after {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 70px;
+  position: absolute;
+}
+
+.card::after {
+  transform: scale(-1, -1);
+  right: 10px;
+  bottom: -16px;
+}
+
+.card::before {
+  left: 10px;
+  top: -16px;
+}
+
+.diamonds,
+.hearts {
+  color: red;
+}
+
+.hearts::before,
+.hearts::after {
+  content: "♥";
+}
+
+.diamonds::before,
+.diamonds::after {
+  content: "♦";
+}
+
+.spades::before,
+.spades::after {
+  content: "♠";
+}
+
+.clubs::before,
+.clubs::after {
+  content: "♣";
 }
